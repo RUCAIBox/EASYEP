@@ -1,13 +1,26 @@
 # Table of Contents
-- [1. Introduction](#1-introduction)
-- [2. Preparation](#2-preparation)
-- [3. Expert Selection](#3-expert-selection)
-- [4. Model Pruning](#4-model-pruning)
-- [5. Evaluation](#5-evaluation)
-- [6. Citation](#6-citation)
+- [Table of Contents](#table-of-contents)
+  - [1. Introduction](#1-introduction)
+  - [2. Preparation](#2-preparation)
+    - [2.1 Requirements](#21-requirements)
+    - [2.2 Model Preparation](#22-model-preparation)
+      - [System Requirements](#system-requirements)
+      - [Model Weights Conversion](#model-weights-conversion)
+    - [Data Preparation](#data-preparation)
+  - [3. Expert Selection](#3-expert-selection)
+  - [4. Model Pruning](#4-model-pruning)
+    - [4.1 Quick Start](#41-quick-start)
+    - [4.2 Actual Pruning](#42-actual-pruning)
+      - [Prune the Model](#prune-the-model)
+      - [Deploy the Pruned Model](#deploy-the-pruned-model)
+  - [5. Evaluation](#5-evaluation)
+  - [6. Citation](#6-citation)
 
 
 ## 1. Introduction
+Mixture-of-Experts (MoE) models achieve a favorable trade-off between performance and inference efficiency by activating only a subset of experts. However, the memory overhead of storing all experts remains a major limitation, especially in large-scale MoE models such as DeepSeek-R1 (671B). In this study, we investigate domain specialization and expert redundancy in large-scale MoE models and uncover a consistent behavior we term *few-shot expert localization*, with only a few demonstrations, the model consistently activates a sparse and stable subset of experts. Building on this observation, we propose a simple yet effective pruning framework, **EASY-EP**, that leverages a few domain-specific demonstrations to identify and retain only the most relevant experts. EASY-EP comprises two key components: **output-aware expert importance assessment** and **expert-level token contribution estimation**. The former evaluates the importance of each expert for the current token by considering the gating scores and magnitudes of the outputs of activated experts, while the latter assesses the contribution of tokens based on representation similarities after and before routed experts. Experiments show that our method can achieve comparable performances and $2.99\times$ throughput under the same memory budget with full DeepSeek-R1 with only half the experts.
+
+![](framework-v5.png)
 
 ## 2. Preparation
 ---
