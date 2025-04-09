@@ -1,11 +1,11 @@
 # Domain Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations
-- [Domain Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](#domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-demonstrations)
-  - [1. Introduction](#1-introduction)
-  - [2. Preparation](#2-preparation)
-  - [3. Expert Selection](#3-expert-selection)
-  - [4. Model Pruning](#4-model-pruning)
-  - [5. Evaluation](#5-evaluation)
-  - [6. Citation](#6-citation)
+## Table of Contents
+- [1. Introduction](#1-introduction)
+- [2. Preparation](#2-preparation)
+- [3. Expert Selection](#3-expert-selection)
+- [4. Model Pruning](#4-model-pruning)
+- [5. Evaluation](#5-evaluation)
+- [6. Citation](#6-citation)
 
 
 ## 1. Introduction
