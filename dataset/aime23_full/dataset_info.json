@@ -1,0 +1,57 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 967550,
+  "description": "",
+  "download_checksums": {
+    "/data/ruc/Slow_Thinking_with_LLMs/OpenRLHF-STILL/evaluation/results_full/AIME2023-L_32768-sample-part_0-0123-none.jsonl": {
+      "num_bytes": 1014722,
+      "checksum": null
+    }
+  },
+  "download_size": 1014722,
+  "features": {
+    "input": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prediction": [
+      {
+        "solution": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1982272,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 967550,
+      "num_examples": 29,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
