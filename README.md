@@ -1,5 +1,5 @@
-# Table of Contents
-- [Table of Contents](#table-of-contents)
+# Domain Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations
+- [Domain Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](#domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-demonstrations)
   - [1. Introduction](#1-introduction)
   - [2. Preparation](#2-preparation)
     - [2.1 Requirements](#21-requirements)
