@@ -112,7 +112,7 @@ python3 -m sglang.launch_server \
     --disable-cuda-graph 
 ```
 
-> ⚠️ In this mode, all 256 routed experts are still loaded for compatibility. The masking is applied during the gating stage. See 3.2 for full pruning.
+> ⚠️ In this mode, all 256 routed experts are still loaded for compatibility. The masking is applied during the gating stage. See 4.2 for full pruning.
 
 ---
 
