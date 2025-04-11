@@ -78,7 +78,13 @@ python pruning/expert_selection.py \
     --expert_mask expert_statistics/expert_mask/aime23_128_mask.json \
     --target_number 128
 ```
-
+For mixed-domain pruning, we employ the multiple files in about expert information in ``expert_statistics\expert_information`` and merge them into a mask file.
+```bash
+python pruning/expert_selection_mix_domain.py \
+    --expert_info_dir expert_statistics/expert_information \
+    --expert_mask expert_statistics/expert_mask/mixed_domain_128.json \
+    --target_number 128
+```
 
 ## 4. Model Pruning
 ---
