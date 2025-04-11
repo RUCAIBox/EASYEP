@@ -1,0 +1,45 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 128224,
+  "description": "",
+  "download_checksums": {
+    "/export/ruc/dataset/test_plus.jsonl": {
+      "num_bytes": 132718,
+      "checksum": null
+    }
+  },
+  "download_size": 132718,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 260942,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 128224,
+      "num_examples": 26,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

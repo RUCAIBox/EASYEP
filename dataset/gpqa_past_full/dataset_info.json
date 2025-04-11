@@ -1,0 +1,69 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 5990561,
+  "description": "",
+  "download_checksums": {
+    "/export/ruc/Slow_Thinking_with_LLMs/STILL-3-TOOL/evaluation/outputs/candidate.jsonl": {
+      "num_bytes": 6159692,
+      "checksum": null
+    }
+  },
+  "download_size": 6159692,
+  "features": {
+    "input": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prediction": [
+      {
+        "solution": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "correctness": {
+          "dtype": "bool",
+          "_type": "Value"
+        },
+        "stop_reason": {
+          "dtype": "null",
+          "_type": "Value"
+        },
+        "finished": {
+          "dtype": "bool",
+          "_type": "Value"
+        }
+      }
+    ],
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 12150253,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 5990561,
+      "num_examples": 249,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

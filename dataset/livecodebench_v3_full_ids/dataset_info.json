@@ -1,0 +1,87 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 2866663,
+  "description": "",
+  "download_checksums": {
+    "/export/ruc//LiveCodeBench-main/output/DeepSeek-R1/Scenario.codegeneration_1_0.2.json": {
+      "num_bytes": 2969796,
+      "checksum": null
+    }
+  },
+  "download_size": 2969796,
+  "features": {
+    "question_title": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question_content": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "platform": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "contest_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "contest_date": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "starter_code": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "difficulty": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output_list": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "code_list": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 5836459,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 2866663,
+      "num_examples": 101,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
