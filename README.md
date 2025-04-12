@@ -55,7 +55,7 @@ python pruning/convert.py --hf-ckpt-path /path/to/DeepSeek-R1 --save-path /path/
 This part primarily involves extracting and calculating internal MoE hidden states using calibration data, which will be used for later pruning.
 ```bash
 torchrun --nproc_per_node=8 pruning/inf_new.py \
-    --ckpt-path /path/to/DeepSeek-R1-Demo \
+    --ckpt-path /path/to/DeepSeek-R1 \
     --config configs/config_671B.json \
     --input-file dataset/aime23_full \
     --output expert_statistics/token_information/aime.jsonl
@@ -88,7 +88,7 @@ We provide two modes of model pruning using the [sglang](https://github.com/Inte
 ### 4.1 Quick Start
 
 > [!NOTE]  
-> This setup requires `sglang==0.4.3`
+> In the following steps, the official DeepSeek-R1 model weights from Hugging Face should be used
 
 1. Replace the code in:
 ```
