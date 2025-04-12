@@ -108,7 +108,7 @@ current_fp = "EASYEP/expert_statistics/expert_mask/aime23_full_br_128.json"  # R
 ```bash
 GLOO_SOCKET_IFNAME=bond0 NCCL_SOCKET_IFNAME=bond0 \
 python3 -m sglang.launch_server \
-    --model-path pruned_model \
+    --model-path path/to/DeepSeek-R1 \
     --tp 8 --dist-init-addr localhost:5002 \
     --trust-remote-code \
     --mem-fraction-static 0.9 \
