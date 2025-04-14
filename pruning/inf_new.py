@@ -30,7 +30,7 @@ class Hook_gate2():
         self.simi2.append(output[1].cpu())
         self.simi3.append(output[2].cpu())
 
-from pruning.model_new import Transformer, ModelArgs
+from model_new import Transformer, ModelArgs
 
 
 def sample(logits, temperature: float = 1.0):
