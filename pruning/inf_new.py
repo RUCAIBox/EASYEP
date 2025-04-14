@@ -53,7 +53,6 @@ def inference(model, dataset,rank, output):
     for data in tqdm(dataset):
 
         count+=1
-
         Hook = Hook_gate()
         hooks = []
         Hook2 = Hook_gate2()
@@ -65,7 +64,11 @@ def inference(model, dataset,rank, output):
             hooks2.append(model.layers[layer].tmp.register_forward_hook(Hook2.hook_fn))
         
         tokens = torch.tensor([data['input_ids']],device="cuda")
-        # print(tokens.shape)
+        print(tokens.shape) # torch.Size([1, 14820])
+        if tokens.shape[1] > 13000:
+            print(f"Skipping tokens with shape {tokens.shape}, too long for probing")
+            continue
+
         with torch.no_grad():
             logits = model.forward(tokens[:, :], 0)
 
