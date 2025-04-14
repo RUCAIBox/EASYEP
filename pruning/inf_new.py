@@ -32,7 +32,6 @@ class Hook_gate2():
 
 from model_new import Transformer, ModelArgs
 
-
 def sample(logits, temperature: float = 1.0):
     """
     Samples a token from the logits using temperature scaling.
@@ -59,14 +58,14 @@ def inference(model, dataset,rank, output):
         hooks = []
         Hook2 = Hook_gate2()
         hooks2 = []
-        print(len(model.layers))
+        # print(len(model.layers))
         for layer in range(3,61):
             # 1, 59 for deepseek-v2
             hooks.append(model.layers[layer].ffn.tmp.register_forward_hook(Hook.hook_fn))
             hooks2.append(model.layers[layer].tmp.register_forward_hook(Hook2.hook_fn))
         
         tokens = torch.tensor([data['input_ids']],device="cuda")
-        print(tokens.shape)
+        # print(tokens.shape)
         with torch.no_grad():
             logits = model.forward(tokens[:, :], 0)
 
@@ -99,6 +98,7 @@ def main(
     input_file: str = "",
     max_new_tokens: int = 100,
     temperature: float = 1.0,
+    output_file: str = "",
 ) -> None:
     """
     Main function to load the model and perform interactive or batch text generation.
@@ -134,7 +134,7 @@ def main(
 
     
     dataset = load_from_disk(input_file)
-    inference(model, dataset,rank, args.output)
+    inference(model, dataset, rank, output_file)
 
 
     if world_size > 1:
@@ -163,4 +163,4 @@ if __name__ == "__main__":
     parser.add_argument("--max-new-tokens", type=int, default=200)
     parser.add_argument("--temperature", type=float, default=0.2)
     args = parser.parse_args()
-    main(args.ckpt_path, args.config, args.input_file, args.max_new_tokens, args.temperature)
+    main(args.ckpt_path, args.config, args.input_file, args.max_new_tokens, args.temperature, args.output)
