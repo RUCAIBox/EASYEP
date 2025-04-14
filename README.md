@@ -55,7 +55,7 @@ python pruning/convert.py --hf-ckpt-path /path/to/DeepSeek-R1 --save-path /path/
 This part primarily involves extracting and calculating internal MoE hidden states using calibration data, which will be used for later pruning.
 ```bash
 torchrun --nproc_per_node=8 pruning/inf_new.py \
-    --ckpt-path /path/to/DeepSeek-R1 \
+    --ckpt-path /path/to/DeepSeek-R1-Demo \
     --config configs/config_671B.json \
     --input-file dataset/aime23_full \
     --output expert_statistics/token_information/aime.jsonl
