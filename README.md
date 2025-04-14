@@ -18,7 +18,7 @@ Mixture-of-Experts (MoE) models achieve a favorable trade-off between performanc
 
 ### 2.1 Requirements
 ```bash
-cd EasyEP
+cd EASYEP
 conda create -n easyep python=3.10
 conda activate easyep
 pip install -r requirements.txt
